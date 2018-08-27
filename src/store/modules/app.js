@@ -13,6 +13,7 @@ const app = {
       } else{
         Cookies.set('sidebarStatus', 0)
       }
+      state.sidebar.opened = !state.sidebar.opened
     }
   },
   actions: {

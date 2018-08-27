@@ -25,10 +25,12 @@ export default {
 
 <style lang="scss" scoped>
 .hamburger {
+  display: inline-block;
 	cursor: pointer;
 	transform: rotate(0deg);
 	transition: .38s;
 	transform-origin: 50% 50%;
+  user-select: none;
 }
 
 .hamburger.is-active {

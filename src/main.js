@@ -7,7 +7,8 @@ import store from './store'
 import axios from 'axios'
 import ElementUI from 'element-ui'
 import i18n from './i18n/i18n'
-import 'element-ui/lib/theme-chalk/index.css'
+// import 'element-ui/lib/theme-chalk/index.css'
+import '../theme/index.css'
 import '../static/font/iconfont.css'
 
 Vue.config.productionTip = false

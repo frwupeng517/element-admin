@@ -1,12 +1,10 @@
 <template>
-  <!-- <div class="screenfull-container"> -->
     <el-tooltip class="item" effect="dark" content="全屏" placement="bottom">
       <i class="iconfont icon-quanping screenfull"
         :style="{'width': width+'px', 'height': height+'px', 'color': fill}"
         @click="toggleFull()">
       </i>
     </el-tooltip>
-  <!-- </div> -->
 </template>
 
 <script>

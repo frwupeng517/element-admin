@@ -3,7 +3,7 @@
     <hamburger 
       class="hamburger-container"
       :toggleClick="toggleSideBar"
-      :isActive="sidebar.opened">
+      :isActive="!sidebar.opened">
     </hamburger>
     <div class="right-menu">
       <screenfull class="screenfull"></screenfull>
@@ -16,6 +16,7 @@
           </el-dropdown-menu>
         </el-dropdown>
       </div>
+      <theme-picker></theme-picker>
     </div>
   </el-menu>
 </template>
@@ -24,11 +25,13 @@
 import {mapGetters, mapActions} from 'vuex'
 import hamburger from '@/components/Hamburger'
 import screenfull from '@/components/Screenfull'
+import themePicker from '@/components/ThemePicker'
 
 export default {
   components: {
     hamburger,
-    screenfull
+    screenfull,
+    themePicker
   },
   computed: {
     ...mapGetters([
@@ -37,7 +40,7 @@ export default {
   },
   methods: {
     toggleSideBar() {
-      this.toggleSideBar()
+      this.toggleSidebar()
     },
     toggleLang(lang) {
       if(lang == 'zh'){
@@ -70,14 +73,21 @@ export default {
   border-radius: 0px !important;
   .hamburger-container {
     float: left;
+    width: 50px;
     height: 50px;
-    line-height: 58px;
+    line-height: 50px;
     padding: 0 10px;
+    text-align: center;
+    outline: none;
   }
   .right-menu{
     float: right;
     height: 100%;
     padding-right: 30px;
+    outline: none;
+    .theme-picker{
+      vertical-align: middle;
+    }
   }
   .errLog-container {
     display: inline-block;
@@ -85,10 +95,6 @@ export default {
     right: 150px;
   }
   .screenfull, .lang {
-    // position: absolute;
-    // right: 90px;
-    // top: 16px;
-    // color: red;
     display: inline-block;
     height: 22px;
     line-height: 22px;
