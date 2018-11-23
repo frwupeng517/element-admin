@@ -11,6 +11,7 @@ import Announce from '@/views/announce/Announce'
 import Bulletin from '@/views/announce/bulletin/Bulletin'
 import PostBulletin from '@/views/announce/bulletin/Post'
 import BulletinList from '@/views/announce/bulletin/List'
+import ShopCart from '@/views/announce/shopcart/ShopCart'
 
 Vue.use(Router)
 
@@ -78,6 +79,11 @@ export default new Router({
                   component: BulletinList
                 }
               ]
+            },
+            {
+              path: '/announce/shopcart',
+              name: '飞入购物车',
+              component: ShopCart
             }
           ]
         }

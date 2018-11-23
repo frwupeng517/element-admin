@@ -1,0 +1,72 @@
+{
+  "menu": [
+    {
+      "id": 1,
+      "label": "首页",
+      "icon": "icon-yemian-copy-copy",
+      "path": "/"
+    },
+    {
+      "id": 2,
+      "label": "仓库管理",
+      "icon": "icon-cangku",
+      "children": [
+        {
+          "id": 201,
+          "label": "仓库",
+          "path": "/warehouse/warehouse"
+        },
+        {
+          "id": 202,
+          "label": "区域库",
+          "path": "/warehouse/area"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "label": "订单管理",
+      "icon": "icon-dingdan",
+      "children": [
+        {
+          "id": 301,
+          "label": "提货订单",
+          "path": "/order/pickup"
+        },
+        {
+          "id": 302,
+          "label": "到货订单",
+          "path": "/order/arrival"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "label": "公告栏",
+      "icon": "icon-gonggao",
+      "children": [
+        {
+          "id": 401,
+          "label": "公告",
+          "children": [
+            {
+              "id": 40101,
+              "label": "发布",
+              "path": "/announce/bulletin/post"
+            },
+            {
+              "id": 40102,
+              "label": "查询",
+              "path": "/announce/bulletin/list"
+            }
+          ]
+        },
+        {
+          "id": 402,
+          "label": "飞入购物车",
+          "path": "/announce/shopcart"
+        }
+      ]
+    }
+  ]
+}

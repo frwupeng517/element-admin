@@ -40,7 +40,7 @@ export default {
   methods: {
     // 获取菜单
     fetchMenus() {
-      this.$axios.get('https://easy-mock.com/mock/5b7e510f835aab0d77dae752/example_copy/menu')
+      this.$axios.get('../../../static/menu/menu.json')  // https://easy-mock.com/mock/5b7e510f835aab0d77dae752/example_copy/menu
         .then(res => {
           console.log(res)
           this.routes = res.data.menu

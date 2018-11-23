@@ -10,9 +10,16 @@ import i18n from './i18n/i18n'
 // import 'element-ui/lib/theme-chalk/index.css'
 import '../theme/index.css'
 import '../static/font/iconfont.css'
+import * as filters from './filters' // 全局filter
+import '../static/directives/drag'
 
 Vue.config.productionTip = false
 Vue.prototype.$axios = axios
+
+// register global utility filters.
+Object.keys(filters).forEach(key => {
+  Vue.filter(key, filters[key])
+})
 
 Vue.use(ElementUI)
 
